@@ -26,7 +26,7 @@ public class main extends HttpServlet {
         
         System.out.println("GET: " + req.getRequestURI());
         if(req.getRequestURI().equalsIgnoreCase("/feed")){
-            resp.setContentType("application/xml");
+            resp.setContentType("application/rss+xml; charset=UTF-8");
             try {
                 URL url = new URL("http://www.uncut-magazin.com/?feed=rss2");
                 BufferedInputStream stream = new BufferedInputStream(url.openStream());
@@ -69,15 +69,15 @@ public class main extends HttpServlet {
                             
                             System.out.println(srcString);
                             Element enclosure = doc.createElement("enclosure");
-                            Attr src = doc.createAttribute("src");
+                            Attr src = doc.createAttribute("url");
                             src.setValue(srcString );
                             Attr type = doc.createAttribute("type");
                             type.setValue("video/mp4");
                             Attr length = doc.createAttribute("length");
                             length.setValue("250000000");
-                            enclosure.setAttributeNode(src);
-                            enclosure.setAttributeNode(type);
                             enclosure.setAttributeNode(length);
+                            enclosure.setAttributeNode(type);
+                            enclosure.setAttributeNode(src);
                             item.appendChild(enclosure);
                         }
                         
