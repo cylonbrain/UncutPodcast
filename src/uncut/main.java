@@ -54,7 +54,19 @@ public class main extends HttpServlet {
                             String jsonstring = getStringFromInputStream(jsonstream);
                             jsonstring = jsonstring.substring(1,jsonstring.length()-1);
                             JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( jsonstring );
-                            String srcString = jsonObject.getJSONObject("clip").getString("baseUrl")+"/"+jsonObject.getJSONArray("playlist").getJSONObject(0).getString("url");
+                            
+                            String baseUrl = jsonObject.getJSONObject("clip").getString("baseUrl");
+                            
+                            JSONArray contentURLs = jsonObject.getJSONArray("playlist");
+                            String contentURL = contentURLs.getJSONObject(0).getString("url");;
+                            for(int j=0;j < contentURLs.size(); j++){
+                                 contentURL = contentURLs.getJSONObject(j).getString("url");
+                                if(contentURL.matches(".*\\.mp4.*")) break;
+                            }
+                           
+                            String srcString = baseUrl +"/"+ contentURL;
+                            
+                            
                             System.out.println(srcString);
                             Element enclosure = doc.createElement("enclosure");
                             Attr src = doc.createAttribute("src");
