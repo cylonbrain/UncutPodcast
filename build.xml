@@ -1,5 +1,5 @@
 <project name="uncut" default="runserver">
-  <property name="appengine.sdk" location="/Users/andybreuhan/Downloads/appengine-java-sdk-1.5.1/" />
+  <property name="appengine.sdk" location="/appengine-java-sdk-1.5.1/" />
 
   <import file="${appengine.sdk}/config/user/ant-macros.xml" />
 
