@@ -1,4 +1,11 @@
 package uncut;
+//DataStore
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
+
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
@@ -23,6 +30,11 @@ public class main extends HttpServlet {
     
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
     throws IOException {
+        
+
+        
+        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+
         
         System.out.println("GET: " + req.getRequestURI());
         if(req.getRequestURI().equalsIgnoreCase("/feed")){
@@ -79,6 +91,11 @@ public class main extends HttpServlet {
                             enclosure.setAttributeNode(type);
                             enclosure.setAttributeNode(src);
                             item.appendChild(enclosure);
+                            
+                            /*Key episodeKey = KeyFactory.createKey("Episodes", id);
+                            Entity episode = new Entity("episode", episodeKey);
+                            episode.setProperty("url", srcString);
+                            datastore.put(episode);*/
                         }
                         
                     }
