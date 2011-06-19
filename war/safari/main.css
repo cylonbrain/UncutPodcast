@@ -42,6 +42,7 @@ body {
     right: 25px;
     margin-top: 0px;
     -webkit-user-select: none;
+    -moz-user-select: none;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
 }
@@ -85,7 +86,7 @@ body {
     padding: 8px;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
-    text-shadow: rgba(0, 0, 0, 0.328125) 1px 1px 1px;
+    text-shadow: rgba(0, 0, 0, 0.324219) 1px 1px 1px;
 }
 
 #subtitle {
@@ -134,7 +135,7 @@ body {
     margin: auto;
     max-width: 100%;
     max-height: 100%;
-    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.160156))) 0 0 0 0 stretch stretch;
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.152344))) 0 0 0 0 stretch stretch;
 }
 
 #summary {
@@ -162,8 +163,8 @@ body {
     bottom: 120px;
     width: 1px;
     background-image: url(Parts/Images/splitter.png);
-    background-repeat: repeat-y;
     -webkit-dashboard-region: dashboard-region(control rectangle);
+    background-repeat: no-repeat repeat;
 }
 
 #episodeView {
@@ -207,9 +208,9 @@ body {
 
 #splitter1 {
     overflow: hidden;
-    background-repeat: repeat-x;
     height: 8px;
     background-image: url(Parts/Images/splitter1.png);
+    background-repeat: repeat no-repeat;
 }
 
 #episodeList {
@@ -223,6 +224,7 @@ body {
     left: 0px;
     top: 0px;
     -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 .listRowTemplate_template {
@@ -309,8 +311,8 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     bottom: 0px;
     left: 0px;
     background-image: url(Parts/Images/episodeShape.png);
-    background-repeat: repeat-x;
     -webkit-background-size: 100% 100%;
+    background-repeat: repeat no-repeat;
 }
 
 #detailEpisodeTitle {
@@ -354,15 +356,16 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     top: 11px;
     right: 12px;
     margin-left: auto;
-    -webkit-border-top-right-radius: 8px 8px;
-    -webkit-border-top-left-radius: 8px 8px;
-    -webkit-border-bottom-left-radius: 8px 8px;
-    -webkit-border-bottom-right-radius: 8px 8px;
-	-moz-border-radius: 8px;
+    border-top-right-radius: 8px 8px;
+    border-top-left-radius: 8px 8px;
+    border-bottom-left-radius: 8px 8px;
+    border-bottom-right-radius: 8px 8px;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
     cursor: default;
     -webkit-user-select: none;
+    -moz-border-radius: 8px;
+    -moz-user-select: none;
 }
 
 #playLabel {
@@ -371,7 +374,7 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     overflow: hidden;
     position: absolute;
     color: white;
-    text-shadow: rgba(0, 0, 0, 0.226562) 1px 1px 1px;
+    text-shadow: rgba(0, 0, 0, 0.21875) 1px 1px 1px;
     font-size: 11px;
     left: 6px;
     top: 1px;
@@ -400,11 +403,11 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     margin-top: 6px;
     min-height: 40px;
     font-size: 12px;
-    -webkit-border-top-right-radius: 8px 8px;
-    -webkit-border-top-left-radius: 8px 8px;
-    -webkit-border-bottom-left-radius: 8px 8px;
-    -webkit-border-bottom-right-radius: 8px 8px;
-	-moz-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-top-right-radius: 8px 8px;
+    border-top-left-radius: 8px 8px;
+    border-bottom-left-radius: 8px 8px;
+    border-bottom-right-radius: 8px 8px;
 }
 
 #episodeDescription {
@@ -447,6 +450,7 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     display: none;
     cursor: default;
     -webkit-user-select: none;
+    -moz-user-select: none;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
 }
@@ -460,7 +464,7 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    background-color: rgba(42, 42, 42, 0.320312);
+    background-color: rgba(42, 42, 42, 0.3125);
 }
 
 #overlayPanel {
@@ -472,14 +476,14 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     margin-left: auto;
     margin-top: 59px;
     width: 514px;
-    -webkit-border-top-right-radius: 5px 5px;
-    -webkit-border-top-left-radius: 5px 5px;
-    -webkit-border-bottom-left-radius: 5px 5px;
-    -webkit-border-bottom-right-radius: 5px 5px;
-	-moz-border-radius: 5px;
+    border-top-right-radius: 5px 5px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
     height: 370px;
+    -moz-border-radius: 5px;
 }
 
 #closeButtonContainer {
@@ -488,13 +492,13 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     position: relative;
     -webkit-margin-top-collapse: separate;
     -webkit-margin-bottom-collapse: separate;
-    background-repeat: no-repeat;
     margin-top: -12px;
     margin-left: -13px;
     margin-right: 497px;
     min-height: 30px;
     background-image: url(Images/closeButtonContainer.png);
     background-position: 0px 0px;
+    background-repeat: no-repeat no-repeat;
 }
 
 #closeButtonContainer:hover {
@@ -522,6 +526,45 @@ body.DC_windowInactive .listRowTemplate_template.selected {
     height: auto;
 }
 
-
 #content {
+}
+
+#textField {
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    margin-top: 2px;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    position: relative;
+    display: block;
+    margin-left: 3px;
+    width: 190px;
+}
+
+#image1 {
+    width: 128px;
+    height: 128px;
+    position: relative;
+    -webkit-margin-top-collapse: separate;
+    -webkit-margin-bottom-collapse: separate;
+    margin-left: 42px;
+    margin-top: 0px;
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+}
+
+#DC_img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }

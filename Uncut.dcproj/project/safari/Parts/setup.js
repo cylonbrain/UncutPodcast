@@ -15,6 +15,7 @@ var dashcodePartSpecs = {
     "episodeList": { "allowsEmptySelection": true, "dataArray": ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"], "labelElementId": "episodeTitle", "listStyle": "List.EDGE_TO_EDGE", "propertyValues": { "dataArrayBinding": { "keypath": "podcastDataSource.content.channel.item" } }, "sampleRows": 7, "selectionEnabled": true, "useDataSource": true, "view": "DC.List" },
     "episodeTitle": { "propertyValues": { "textBinding": { "keypath": "*.title" } }, "text": "Episode Title", "view": "DC.Text" },
     "image": { "propertyValues": { "srcBinding": { "keypath": "podcastDataSource.content.channel.itunes:image.$href", "multipleValuesPlaceholder": "Images/podcast.png", "noSelectionPlaceholder": "Images/podcast.png", "nullValuePlaceholder": "Images/podcast.png", "transformer": "DC.transformer.FirstObject" } }, "view": "DC.ImageLayout" },
+    "image1": { "view": "DC.ImageLayout" },
     "media": { "view": "DC.VideoLayout" },
     "playLabel": { "text": "Play Podcast", "view": "DC.Text" },
     "podcastTitle": { "propertyValues": { "textBinding": { "keypath": "podcastDataSource.content.channel.title" } }, "text": "Podcast Title", "view": "DC.Text" },
@@ -24,6 +25,8 @@ var dashcodePartSpecs = {
     "summary": { "propertyValues": { "textBinding": { "keypath": "podcastDataSource.content.channel.itunes:summary", "transformer": "DC.transformer.FirstObject" } }, "text": "Podcast Summary", "view": "DC.Text" },
     "title": { "propertyValues": { "textBinding": { "keypath": "podcastDataSource.content.channel.title" } }, "text": "Podcast Name", "view": "DC.Text" }
 };
+
+
 
 
 
