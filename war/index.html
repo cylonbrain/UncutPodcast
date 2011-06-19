@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html manifest="safari/OfflineApp.manifest">
+<head>
+    <title>Uncut - Das Filmmagazin</title>
+    <!--[if IE]><script>document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/safari/') + '"/>')</script><![endif]-->
+    <base href="safari/">
+    <script id="DC_baseScript">if(navigator.userAgent.indexOf('AppleWebKit/') == -1) document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/safari/') + '"/>')</script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/ActivityIndicator.css">
+    <link rel="icon" href="Images/Favicon.ico" sizes="32x32 16x16">
+    <script type="text/javascript" src="../Parts/redirector.js"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../Scripts/PodcastSupport.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="header">
+        <div id="podcastTitle"></div>
+    </div>
+    <div id="content">
+        <div id="splitLayout1">
+            <div id="podcastView">
+                <div id="title"></div>
+                <div id="subtitle"></div>
+                <div id="image" apple-part-spec="">
+                    <img id="img" src="Images/podcast.png">
+                </div>
+                <div id="summary"></div>
+            </div>
+            <div id="splitter">
+            </div>
+            <div id="episodeView">
+                <div id="splitLayout2">
+                    <div id="episodeListView">
+                        <ul id="episodeList">
+                            <li id="listRowTemplate" class="listRowTemplate_template" ondblclick="toggleMediaView(event)" style="">
+                                <div id="episodeTitle" class="episodeTitle_template"></div>
+                                <div id="episodeDate" class="episodeDate_template"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="splitter1">
+                    </div>
+                    <div id="episodeContainer">
+                        <div id="episodeShape">
+                            <div id="detailBox">
+                                <div id="detailEpisodeTitle"></div>
+                                <div id="detailEpisodeDuration"></div>
+                                <div id="playButton" class="playBox1_template" onclick="toggleMediaView(event)">
+                                    <div id="playLabel" class="playLabel1_template"></div>
+                                    <img src="Images/play.png" id="playImage" class="play1_template">
+                                </div>
+                                <div id="episodeDescriptionBox">
+                                    <div id="detailEpisodeDescription"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="activityIndicator" src="../Images/ActivityIndicatorWhite.png" style="-webkit-animation-name: none; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; ">
+    <div id="overlayContainer">
+        <div id="transparentDiv"></div>
+        <div id="overlayPanel">
+            <div id="closeButtonContainer" onclick="toggleMediaView(event)">
+            </div>
+            <div id="media">
+                <video id="dc_ivideo" controls="">
+                    <!--[if IE]><object id="_ie_event_1" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598"></object><![endif]-->
+                    <object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" height="100%" width="100%" style="behavior:url(#_ie_event_1);">
+                        <param name="src" value="">
+                        <param name="enablejavascript" value="true">
+                        <param name="postdomevents" value="true">
+                        <param name="scale" value="aspect">
+                        <param name="loop" value="false">
+                        <param name="autoplay" value="false">
+                        <param name="controller" value="true">
+                        <embed src="" pluginspage="http://www.apple.com/quicktime/download/" enablejavascript="true" postdomevents="true" type="video/quicktime" scale="aspect" target="myself" height="100%" width="100%" style="width:100%;height:100%;">
+                    </object>
+                </video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

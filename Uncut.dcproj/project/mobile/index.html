@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html manifest="OfflineApp.manifest">
+<head>
+    <title>Uncut - Das Filmmagazin</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="Images/WebClipIcon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/ActivityIndicator.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/Transitions.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../Scripts/PodcastSupport.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div apple-part="com.apple.Dashcode.part.box" id="header">
+        <div apple-part="com.apple.Dashcode.part.rectanglewebshape" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.891111612,0.905943394,0.926527798,1; image-bottom-color: 0.649210334,0.649210334,0.649210334,1; image-radius: 0,0,0,0; image-border: 0; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 0; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="headerShadow">
+        </div>
+        <div apple-part="com.apple.Dashcode.part.box" id="headerBorder"></div>
+        <div apple-part="com.apple.Dashcode.part.webtext" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="podcastTitle" apple-group="text"></div>
+    </div>
+    <div apple-part="com.apple.Dashcode.part.StackLayout" id="stackLayout">
+        <div id="episodeList" apple-part-locked="true">
+            <div id="content">
+                <ul apple-part="com.apple.Dashcode.part.edgeToEdgeList" id="episodes" class="">
+                    <li id="listRowTemplate1" apple-template="true" class="listRowTemplate1_template first" onclick="rowClicked(event)">
+                        <div id="label" apple-part="com.apple.Dashcode.part.webtext" class="label_template" apple-text-overflow="" apple-style="part-height-dependent: true;part-width-dependent: true;">Episode Name</div>
+                        <div apple-part="com.apple.Dashcode.part.roundedrectanglewebshape" apple-style="image-theme: 0; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 1,1,1,1; image-radius: 8,8,8,8; image-border: 0; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="datePill" class="datePill_template">
+                        </div>
+                        <div apple-part="com.apple.Dashcode.part.webtext" class="apple-text apple-no-children date_template" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="date"></div>
+                    </li>
+                </ul>
+            </div>
+            <div apple-part="com.apple.Dashcode.part.box" id="footer">
+                <div apple-part="com.apple.Dashcode.part.box" id="footerBorder"></div>
+                <div apple-part="com.apple.Dashcode.part.rectanglewebshape" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.649210334,0.649210334,0.649210334,1; image-bottom-color: 0.891111612,0.905943394,0.926527798,1; image-radius: 0,0,0,0; image-border: 0; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 0; shine-strength: 0.90; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 0;" id="footerShadow">
+                </div>
+                <div apple-part="com.apple.Dashcode.part.webtext" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="developedWithDashcode" apple-group="text" apple-style="part-height-dependent: true;"></div>
+            </div>
+        </div>
+        <div id="loadingProgress" apple-part-locked="true">
+            <img apple-part="com.apple.Dashcode.part.activityindicator" src="../Images/ActivityIndicatorWhite.png" id="activityIndicator" style="-webkit-animation-name: none; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; ">
+        </div>
+    </div>
+</body>
+</html>

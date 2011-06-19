@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html manifest="OfflineApp.manifest">
+<head>
+    <title>Uncut - Das Filmmagazin</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="YES">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="Images/WebClipIcon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/ActivityIndicator.css">
+    <link rel="stylesheet" type="text/css" href="../Parts/Transitions.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../Scripts/PodcastSupport.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="header">
+        <div id="headerShadow">
+        </div>
+        <div id="headerBorder"></div>
+        <div id="podcastTitle"></div>
+    </div>
+    <div id="stackLayout">
+        <div id="episodeList">
+            <div id="content">
+                <ul id="episodes">
+                    <li id="listRowTemplate1" class="listRowTemplate1_template first" onclick="rowClicked(event)">
+                        <div id="label" class="label_template">Episode Name</div>
+                        <div id="datePill" class="datePill_template">
+                        </div>
+                        <div class="date_template" id="date"></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="footer">
+                <div id="footerBorder"></div>
+                <div id="footerShadow">
+                </div>
+                <div id="developedWithDashcode"></div>
+            </div>
+        </div>
+        <div id="loadingProgress">
+            <img src="../Images/ActivityIndicatorWhite.png" id="activityIndicator" style="-webkit-animation-name: none; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; ">
+        </div>
+    </div>
+</body>
+</html>
