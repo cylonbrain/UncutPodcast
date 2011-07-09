@@ -57,7 +57,7 @@ public class main extends HttpServlet {
         if(req.getRequestURI().equalsIgnoreCase("/feed")){
             resp.setContentType("application/rss+xml; charset=UTF-8");
             try {
-                URL url = new URL("http://www.uncut-magazin.com/?feed=rss2");
+                URL url = new URL("http://www.uncut-magazin.com/feed/");
                 BufferedInputStream stream = new BufferedInputStream(url.openStream());
                 
                 DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
